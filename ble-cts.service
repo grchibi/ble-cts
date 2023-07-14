@@ -1,0 +1,11 @@
+[Unit]
+Description = BLE Current Time Service application
+
+[Service]
+ExecStart = /home/iot/userdata/ble-cts/env/bin/python3 /home/iot/userdata/ble-cts/src/app.py
+ExecStop = /bin/kill -SIGINT $MAINPID
+Restart=always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
